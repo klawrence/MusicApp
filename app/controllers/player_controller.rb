@@ -2,6 +2,8 @@ class PlayerController < UIViewController
   def viewDidLoad
     super
 
+    @player = Player.new
+
     self.title = 'MusicApp'
     self.view.backgroundColor = UIColor.whiteColor
     self.view.addSubview create_play_button
@@ -15,7 +17,7 @@ class PlayerController < UIViewController
     @play_button.center = CGPointMake(self.view.frame.size.width / 2, 200)
 
     @play_button.when(UIControlEventTouchUpInside) do
-      puts 'Play something'
+      @player.play '302053341'
     end
 
     @play_button

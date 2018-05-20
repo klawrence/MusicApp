@@ -44,7 +44,7 @@ Motion::Project::App.setup do |app|
   # ===========================================================================================
   # 5. If you need to reference any additional iOS libraries, use the config array below.
   # ===========================================================================================
-  # app.frameworks << "StoreKit"
+  app.frameworks << 'MediaPlayer'
 
   # reasonable defaults
   app.device_family = [:iphone, :ipad]
