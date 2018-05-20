@@ -1,4 +1,4 @@
-class SearchController < UIViewController
+class SearchController < UITableViewController
   def viewDidLoad
     super
 
