@@ -1,7 +1,7 @@
 class SearchController < UITableViewController
-  def viewDidLoad
-    super
 
-    self.title = 'Search'
-  end
+  # def viewDidLoad
+  #   super
+  #
+  # end
 end

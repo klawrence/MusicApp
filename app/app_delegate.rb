@@ -2,14 +2,11 @@ class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
     BubbleWrap.use_weak_callbacks = true
 
-    player_controller = PlayerController.new
-    search_controller = SearchController.new
-
-    tab_controller = UITabBarController.new
-    tab_controller.viewControllers = [player_controller, search_controller]
+    playerController = PlayerController.new
+    navigationController = UINavigationController.alloc.initWithRootViewController(playerController)
 
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = tab_controller
+    @window.rootViewController = navigationController
     @window.makeKeyAndVisible
 
     true
