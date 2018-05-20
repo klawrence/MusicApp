@@ -4,7 +4,7 @@ class Player
   end
 
   def play track_id
-    Logger.log "Play #{track_id}", area: :player
+    puts "Play #{track_id}"
 
     @player.setQueueWithStoreIDs([track_id])
     @player.play

@@ -4,10 +4,19 @@ class PlayerController < UIViewController
     super
 
     @player = Player.new
+    @search_controller = SearchController.new
 
     self.title = 'MusicApp'
     self.view.backgroundColor = UIColor.whiteColor
+
     self.view.addSubview create_play_button
+    self.navigationItem.rightBarButtonItem = create_search_button
+  end
+
+  def create_search_button
+    @search_button = BW::UIBarButtonItem.new(system: :search) do
+      self.navigationController.pushViewController(@search_controller, animated: true)
+    end
   end
 
   def create_play_button
