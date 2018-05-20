@@ -1,6 +1,6 @@
 # Getting Started with Apple Music and RubyMotion
 
-This is a project that I wrote to learn how to code an iPhone app that plays music
+This is a project that I wrote to learn how to code an iPhone app to play music
 from my Apple Music subscription using [RubyMotion](http://www.rubymotion.com/).
 
 I documented what I learned on Medium. 
