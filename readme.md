@@ -33,4 +33,6 @@ Then:
 
 ## Join the RubyMotion Slack Channel #
 
-[Here is the link.](http://motioneers.herokuapp.com/) Come and say hello!
+http://motioneers.herokuapp.com/
+
+Come and say hello!
