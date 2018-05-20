@@ -1,5 +1,7 @@
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
+    BubbleWrap.use_weak_callbacks = true
+
     playerController = PlayerController.new
     navigationController = UINavigationController.alloc.
         initWithRootViewController(playerController)
