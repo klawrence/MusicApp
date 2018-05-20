@@ -13,6 +13,11 @@ class PlayerController < UIViewController
     @play_button.font = UIFont.boldSystemFontOfSize(80.0)
     @play_button.sizeToFit
     @play_button.center = CGPointMake(self.view.frame.size.width / 2, 200)
+
+    @play_button.when(UIControlEventTouchUpInside) do
+      puts 'Play something'
+    end
+
     @play_button
     end
 end

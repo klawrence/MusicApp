@@ -1,12 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bubble-wrap (1.9.6)
     rake (12.3.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bubble-wrap
   rake
 
 BUNDLED WITH
