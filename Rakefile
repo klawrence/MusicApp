@@ -39,8 +39,8 @@ Motion::Project::App.setup do |app|
   #    https://developer.apple.com/account/ios/identifier/bundle. You must enroll into Apple's
   #    Developer program to get access to this screen (there is an annual fee of $99).
   # ===========================================================================================
-  # app.identifier = ''
-
+  app.identifier = 'com.diamond-sky.music-app'
+  
   # ===========================================================================================
   # 5. If you need to reference any additional iOS libraries, use the config array below.
   # ===========================================================================================
@@ -70,7 +70,7 @@ Motion::Project::App.setup do |app|
   #
   #    Download the profile and set the path to the download location below.
   # ===========================================================================================
-  # app.provisioning_profile = ''
+  app.provisioning_profile = 'MusicApp.mobileprovision'
 
   # ===========================================================================================
   # 8. Similar to Step 7. Production, create a production certificate at:
