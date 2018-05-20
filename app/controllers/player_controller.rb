@@ -19,5 +19,5 @@ class PlayerController < UIViewController
     end
 
     @play_button
-    end
+  end
 end
