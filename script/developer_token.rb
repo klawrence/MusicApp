@@ -51,9 +51,9 @@ module AppleMusic
   end
 end
 
-team_id = 'your team id' # Find it at https://developer.apple.com/membercenter/index.action#accountSummary
-music_private_key = 'your music private key' # find it at https://developer.apple.com/account/ios/authkey/
-key_file = 'path_to_key_file.p8' # the file you downloaded
+team_id = '7BYEV42EFU' # Find it at https://developer.apple.com/membercenter/index.action#accountSummary
+music_private_key = '45YX8PFGT6' # find it at https://developer.apple.com/account/ios/authkey/
+key_file = 'key_file.p8' # path to the file you downloaded earlier
 
 token = AppleMusic::Token.new music_private_key, team_id, File.open(key_file)
 puts token.auth_token
