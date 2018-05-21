@@ -15,7 +15,8 @@ class MusicSearch
   def search_for_tracks terms, &block
     terms = terms.tr(' ', '+')
     fetch_json("?types=songs&term=#{terms}") { |json|
-      tracks = json['results']['songs']['data'].map{|track_json| Track.new(track_json)}
+      data = json['results']['songs']['data']
+      tracks = data.map{|track_json| Track.new(track_json)}
       block.call(tracks) if block
     }
   end
