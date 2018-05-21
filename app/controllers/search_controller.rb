@@ -1,4 +1,5 @@
 class SearchController < UITableViewController
+  attr_accessor :player
 
   def viewDidLoad
     super
@@ -30,6 +31,11 @@ class SearchController < UITableViewController
     cell.detailTextLabel.text = track.artist
 
     cell
+  end
+
+  def tableView(tableView, didSelectRowAtIndexPath: path)
+    puts "select row at #{path.row}"
+    play @tracks[path.row]
   end
 
 end

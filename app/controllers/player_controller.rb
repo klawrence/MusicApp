@@ -5,6 +5,7 @@ class PlayerController < UIViewController
 
     @player = Player.new
     @search_controller = SearchController.new
+    @search_controller.player = @player
 
     self.title = 'MusicApp'
     self.view.backgroundColor = UIColor.whiteColor

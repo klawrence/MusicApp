@@ -3,10 +3,13 @@ class Player
     @player = MPMusicPlayerController.applicationQueuePlayer
   end
 
-  def play track_id
-    puts "Play #{track_id}"
-
+  def play_track track
+    puts "Play #{track}"
     @player.setQueueWithStoreIDs([track_id])
+    play
+  end
+
+  def play
     @player.play
   end
 end
