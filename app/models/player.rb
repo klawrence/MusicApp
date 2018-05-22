@@ -9,7 +9,16 @@ class Player
   end
 
   def play
-    puts "play"
+    puts 'play'
     @player.play
+  end
+
+  def pause
+    puts 'pause'
+    @player.pause
+  end
+
+  def playing?
+    @player.playbackState == MPMusicPlaybackStatePlaying
   end
 end
