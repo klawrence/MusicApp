@@ -5,7 +5,6 @@ class Player
 
   def set_track track_id
     puts "set_track #{track_id}"
-
     @player.setQueueWithStoreIDs([track_id])
   end
 
