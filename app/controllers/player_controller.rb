@@ -1,11 +1,8 @@
 class PlayerController < UIViewController
-
   def viewDidLoad
     super
 
     @player = Player.new
-    @player.set_track '302053341'
-
     @search_controller = SearchController.new
     @search_controller.player = @player
 

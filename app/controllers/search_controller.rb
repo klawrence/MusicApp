@@ -5,14 +5,20 @@ class SearchController < UITableViewController
     super
 
     @tracks = []
-
     @search = MusicSearch.new
-    @search.search_for_tracks('funny valentine') do |tracks|
-      @tracks = tracks
-      tableView.reloadData
-    end
+
+    create_search_bar
 
     self.title = 'Search'
+  end
+
+  def create_search_bar
+    @search_ui = UISearchController.alloc.initWithSearchResultsController(nil)
+    @search_ui.dimsBackgroundDuringPresentation = false
+    @search_ui.searchBar.sizeToFit
+    @search_ui.searchResultsUpdater = self
+
+    tableView.tableHeaderView = @search_ui.searchBar
   end
 
   def tableView(tableView, numberOfRowsInSection: section)
@@ -36,7 +42,17 @@ class SearchController < UITableViewController
   def tableView(tableView, didSelectRowAtIndexPath: path)
     puts "select row at #{path.row}"
     @player.set_track @tracks[path.row]
-    @play.play
+    @player.play
   end
+
+  def updateSearchResultsForSearchController search_controller
+    terms = search_controller.searchBar.text
+    puts "search terms: #{terms}"
+    @search.search_for_tracks(terms) do |tracks|
+      @tracks = tracks
+      tableView.reloadData
+    end
+  end
+
 
 end

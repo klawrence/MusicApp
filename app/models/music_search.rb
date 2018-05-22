@@ -14,11 +14,13 @@ class MusicSearch
 
   def search_for_tracks terms, &block
     terms = terms.tr(' ', '+')
-    fetch_json("?types=songs&term=#{terms}") { |json|
-      data = json['results']['songs']['data']
-      tracks = data.map{|track_json| Track.new(track_json)}
-      block.call(tracks) if block
-    }
+    fetch_json("?types=songs&term=#{terms}") do |json|
+      if json['results'].any?
+        data = json['results']['songs']['data']
+        tracks = data.map {|track_json| Track.new(track_json)}
+        block.call(tracks) if block
+      end
+    end
   end
 
   def fetch_json(url, &block)
