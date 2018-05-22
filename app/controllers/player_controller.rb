@@ -39,7 +39,6 @@ class PlayerController < UIViewController
       @player.pause
       @play_button.setTitle('▶', forState: UIControlStateNormal)
     else
-      @player.set_track '302053341'
       @player.play
       @play_button.setTitle('||', forState: UIControlStateNormal)
     end

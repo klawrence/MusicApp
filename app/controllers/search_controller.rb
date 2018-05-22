@@ -35,7 +35,8 @@ class SearchController < UITableViewController
 
   def tableView(tableView, didSelectRowAtIndexPath: path)
     puts "select row at #{path.row}"
-    @player.play_track @tracks[path.row]
+    @player.set_track @tracks[path.row]
+    @play.play
   end
 
 end
