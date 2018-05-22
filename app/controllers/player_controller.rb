@@ -3,6 +3,7 @@ class PlayerController < UIViewController
     super
 
     @player = Player.new
+    @player.set_track '302053341'
 
     self.title = 'MusicApp'
     self.view.backgroundColor = UIColor.whiteColor
@@ -17,7 +18,7 @@ class PlayerController < UIViewController
     @play_button.center = CGPointMake(self.view.frame.size.width / 2, 200)
 
     @play_button.when(UIControlEventTouchUpInside) do
-      @player.play '302053341'
+      @player.play
     end
 
     @play_button

@@ -3,10 +3,14 @@ class Player
     @player = MPMusicPlayerController.applicationQueuePlayer
   end
 
-  def play track_id
-    Logger.log "Play #{track_id}", area: :player
+  def set_track track_id
+    puts "set_track #{track_id}"
 
     @player.setQueueWithStoreIDs([track_id])
+  end
+
+  def play
+    puts "play"
     @player.play
   end
 end
