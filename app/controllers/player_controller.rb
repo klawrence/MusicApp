@@ -3,6 +3,7 @@ class PlayerController < UIViewController
     super
 
     @player = Player.new
+    @player.set_track '302053341'
 
     self.title = 'MusicApp'
     self.view.backgroundColor = UIColor.whiteColor
@@ -28,7 +29,6 @@ class PlayerController < UIViewController
       @player.pause
       @play_button.setTitle('▶', forState: UIControlStateNormal)
     else
-      @player.set_track '302053341'
       @player.play
       @play_button.setTitle('||', forState: UIControlStateNormal)
     end
